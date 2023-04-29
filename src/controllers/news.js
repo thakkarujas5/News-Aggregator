@@ -54,7 +54,6 @@ async function getNews(req, res) {
 
             cache = [cache, ...resp]
 
-
             result.push(resp);
 
         }

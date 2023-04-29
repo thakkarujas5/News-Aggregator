@@ -41,13 +41,13 @@ router.post('/register', registerUser)
 // POST route for user login
 router.post('/login', loginUser);
 
-router.put('/preferences', verifyPref, updatePreferences);
+router.put('/preferences',verifyJWT, verifyPref, updatePreferences);
 
-router.get('/preferences', getPreferences)
+router.get('/preferences',verifyJWT, getPreferences)
 
-router.delete('/preferences/:topic', deletePreference);
+router.delete('/preferences/:topic', verifyJWT, deletePreference);
 
-router.get('/news', getNews)
+router.get('/news', verifyJWT, getNews)
 
 
 
