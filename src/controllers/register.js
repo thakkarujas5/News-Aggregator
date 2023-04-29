@@ -8,6 +8,8 @@ const user = require('../schema/user');
 const validateUser = ajv.compile(user);
 const bcrypt = require('bcrypt');
 const users = require('../db/usersDB')
+
+
 function registerUser (req, res)  {
 
     const data = req.body;

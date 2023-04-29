@@ -70,3 +70,13 @@ This api takes in one header information -  Authorization : Bearer [JWT Token]
 This api is used to fetch all relevant articles based on the preferences of the user.<br />
 
 This api takes in one header information -  Authorization : Bearer [JWT Token]
+
+### Cache
+
+I have used a in memory json array as a cache. <br />
+
+Whenever the user calls an API for fetch news articles, all the news articles in the response have a new field added call timeLeft which takes the value 2000. <br />
+
+There is a heartbeat mechanism in place that subtracts 5 from timeLeft from every news article every 5 minutes. <br />
+
+When ever timeLeft becoems <=0 that news article is removed from the cache.
