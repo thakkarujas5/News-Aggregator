@@ -1,5 +1,12 @@
 # News-Aggregator
 
+### Folder Structure
+
+src/models contains all the schemas used <br />
+src/routes contains all the routes used <br />
+src/controllers contains all the logic used in the routes <br/>
+test/routes contains all the test cases for the routes
+
 ## API's
 
 ###  POST '/register'
@@ -80,3 +87,8 @@ Whenever the user calls an API for fetch news articles, all the news articles in
 There is a heartbeat mechanism in place that subtracts 5 from timeLeft from every news article every 5 minutes. <br />
 
 When ever timeLeft becoems <=0 that news article is removed from the cache.
+
+### Test Cases
+
+Added Test cases for all the routes present.
+
