@@ -21,6 +21,7 @@ const updatePreferences = require('../controllers/updatePreferences')
 const getPreferences = require('../controllers/getPreferences');
 const deletePreference = require('../controllers/deletePreference')
 const getNews = require('../controllers/news')
+const heartbeat = require('../controllers/heartbeat')
 const {
     default: axios
 } = require('axios');
@@ -51,15 +52,6 @@ router.get('/news', verifyJWT, getNews)
 
 
 
-setInterval(function () {
-
-    for(let i = 0;i<cache.length;i++)
-    {
-        cache[i].timeLeft-=5;
-    }
-
-    cache = cache.filter(obj => obj.timeLeft > 0);
-
-}, 300000)
+setInterval(heartbeat, 300000)
 
 module.exports = router;

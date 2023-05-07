@@ -18,7 +18,7 @@ function registerUser (req, res)  {
     const valid = validateUser(data);
 
     if (!valid) {
-        const errors = validate.errors.map((error) => {
+        const errors = validateUser.errors.map((error) => {
             return {
                 field: error.dataPath,
                 message: error.message

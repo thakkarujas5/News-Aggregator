@@ -10,7 +10,7 @@ const verifyPref = (req, res, next) => {
 
     if(!q) {
 
-        next('Preferences not verified')
+        next(res.status(400).json({message: "No Preferences"}))
     }
 
     next()

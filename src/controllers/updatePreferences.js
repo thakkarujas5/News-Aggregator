@@ -7,7 +7,10 @@ function updatePreferences(req, res) {
     preferences.push(q);
 
     // Send a response to confirm that the query parameters have been updated
-    res.send('Query parameters have been updated successfully.');
+
+    return res.json({
+        message: 'Query parameters have been updated successfully.'
+    })
 }
 
 module.exports = updatePreferences;
