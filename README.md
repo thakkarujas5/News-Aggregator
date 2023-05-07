@@ -1,5 +1,11 @@
 # News-Aggregator
 
+### Review on Comments given on previous assignment
+
+Since there is no logout route mentioned, so I have considered only one logged in user and according to that only one user would be there. <br />
+
+Input Validation is done by the AJV library, it checks whether the email is in the specified format or not.
+
 ### Folder Structure
 
 src/models contains all the schemas used <br />
